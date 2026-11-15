@@ -1,0 +1,22 @@
+<script>
+  // First visit: send Turkish browsers to /tr/. Afterwards, respect the language the visitor picked.
+  (function () {
+    var key = 'lang';
+    var current = '{{ site.Language.Lang }}';
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    if (!saved) {
+      var wantsTr = (navigator.language || '').toLowerCase().indexOf('tr') === 0;
+      saved = wantsTr ? 'tr' : 'en';
+      if (current === 'en' && saved === 'tr' && location.pathname === '/') {
+        location.replace('/tr/');
+        return;
+      }
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('.lang-menu a, .lang-switch a, a[hreflang]');
+      if (!a) return;
+      try { localStorage.setItem(key, current === 'tr' ? 'en' : 'tr'); } catch (err) {}
+    });
+  })();
+</script>
