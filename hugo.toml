@@ -1,0 +1,78 @@
+baseURL = "https://ysfztpp.github.io/"
+title = "Yusuf Öztop"
+theme = "PaperMod"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  hideFooter = false
+  author = "Yusuf Öztop"
+  description = "Yusuf Öztop — machine translation and multilingual NLP, Boğaziçi University."
+
+  [[params.socialIcons]]
+    name = "orcid"
+    url = "https://orcid.org/0009-0002-3764-5673"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/ysfztpp"
+
+[languages]
+  [languages.en]
+    label = "English"
+    weight = 1
+    [languages.en.params]
+      languageAltTitle = "EN"
+      [languages.en.params.profileMode]
+        enabled = true
+        title = "Yusuf Öztop"
+        subtitle = "Undergraduate at Boğaziçi University, Istanbul. I work on machine translation evaluation, bias in translation systems and multilingual NLP."
+        [[languages.en.params.profileMode.buttons]]
+          name = "About"
+          url = "about/"
+        [[languages.en.params.profileMode.buttons]]
+          name = "Publications"
+          url = "publications/"
+    [[languages.en.menus.main]]
+      name = "About"
+      pageRef = "/about"
+      weight = 1
+    [[languages.en.menus.main]]
+      name = "Publications"
+      pageRef = "/publications"
+      weight = 2
+
+  [languages.tr]
+    label = "Türkçe"
+    weight = 2
+    [languages.tr.params]
+      languageAltTitle = "TR"
+      [languages.tr.params.profileMode]
+        enabled = true
+        title = "Yusuf Öztop"
+        subtitle = "Boğaziçi Üniversitesi'nde lisans öğrencisiyim. Makine çevirisi değerlendirmesi, çeviri sistemlerinde yanlılık ve çok dilli doğal dil işleme üzerine çalışıyorum."
+        [[languages.tr.params.profileMode.buttons]]
+          name = "Hakkımda"
+          url = "about/"
+        [[languages.tr.params.profileMode.buttons]]
+          name = "Yayınlar"
+          url = "publications/"
+    [[languages.tr.menus.main]]
+      name = "Hakkımda"
+      pageRef = "/about"
+      weight = 1
+    [[languages.tr.menus.main]]
+      name = "Yayınlar"
+      pageRef = "/publications"
+      weight = 2
